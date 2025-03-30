@@ -1,0 +1,48 @@
+@import './normalize.css';
+
+main {
+  background-color: #FEFAE0;
+}
+
+
+.random-images {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 300px;
+
+  padding: 10px 10px 20px 10px;
+
+  background-color: #E9EDC9;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #CCD5AE;
+  }
+
+  &:active {
+    max-width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 20px;
+  }
+
+  & div {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+
+
+}
