@@ -1,10 +1,17 @@
-const cards = document.getElementsByClassName("card");
-const reversedCards = [cards[-1], cards[-2], cards[-3]]
+const cards = [...document.getElementsByClassName("card")];
 
 const leftArrow = document.getElementById("left");
 const rightArrow = document.getElementById("right");
 
-rightArrow.addEventListener("click", () => {
+function reversed(list) {
+  let result = new Array();
+  for (let i = list.length - 1; i >= 0; i--) {
+    result.push(list[i]);
+  }
+  return result;
+}
+
+leftArrow.addEventListener("click", () => {
   let src = cards[cards.length - 1].children[0].src;
 
   let srcTemp;
@@ -17,16 +24,15 @@ rightArrow.addEventListener("click", () => {
   }
 });
 
-leftArrow.addEventListener("click", () => {
-    let src = cards[0].children[0].src;
+rightArrow.addEventListener("click", () => {
+  let src = cards[0].children[0].src;
 
-    let srcTemp;
+  let srcTemp;
 
-    for (let element of reversedCards) {
-        let img = element.children[0];
-        srcTemp = img.src;
-        img.src = src;
-        src = srcTemp;
-      }
-  
-  });
+  for (let element of reversed(cards)) {
+    let img = element.children[0];
+    srcTemp = img.src;
+    img.src = src;
+    src = srcTemp;
+  }
+});

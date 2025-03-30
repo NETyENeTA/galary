@@ -1,16 +1,48 @@
-@import './normalize.css';
+@import "./normalize.css";
 
 main {
-  background-color: #FEFAE0;
+  background-color: #fefae0;
 }
 
+.navigate {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  & button {
+    margin: 0 20px;
+
+
+    border: none;
+
+    background-color: #e76f51;
+    border-bottom: 5px #e76f51 solid;
+
+    padding: 5px 10px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+
+      border-bottom: 5px black solid;
+
+
+    }
+
+  }
+}
 
 .random-images {
   display: flex;
 
   justify-content: space-around;
   align-items: center;
-
 }
 
 .card {
@@ -21,12 +53,12 @@ main {
 
   padding: 10px 10px 20px 10px;
 
-  background-color: #E9EDC9;
+  background-color: #e9edc9;
 
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: #CCD5AE;
+    background-color: #ccd5ae;
   }
 
   &:active {
@@ -40,9 +72,5 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
   }
-
-
-
 }
